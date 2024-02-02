@@ -1,0 +1,12 @@
+model: hvt_tiny
+lr: 5e-4  # 1e-3  #5e-4
+warmup_lr: 1e-6 # 1e-3  # 5e-7
+min_lr: 5e-6
+epochs: 300
+cooldown_epochs: 10
+warmup_epochs: 20
+amp: True
+batch_size: 256  # 128 512 342
+sched: cosine
+sched_epochwise: False
+weight_decay: 5e-2

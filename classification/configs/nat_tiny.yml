@@ -1,0 +1,22 @@
+model: nat_tiny
+lr: 1e-3
+#lr_noise: null
+#lr_noise_pct: 0.67
+#lr_noise_std: 1.0
+warmup_lr: 1e-6
+min_lr: 1e-5
+epochs: 300
+cooldown_epochs: 40
+warmup_epochs: 20
+amp: True
+log_wandb: True
+batch_size: 170  # 128
+sched: cosine
+#model_ema_decay: 0.99996
+sched_epochwise: False
+#weight_decay: 5e-2
+#decay_epochs: 30
+#opt_betas: null
+#clip_grad: null
+output: /afs/crc.nd.edu/user/y/ypeng4/Neighborhood-Attention-Transformer/classification/output
+project: imagenet

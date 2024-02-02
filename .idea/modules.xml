@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BiFormer/.idea/BiFormer.iml" filepath="$PROJECT_DIR$/../BiFormer/.idea/BiFormer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Neighborhood-Attention-Transformer.iml" filepath="$PROJECT_DIR$/.idea/Neighborhood-Attention-Transformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Neighborhood-Attention-Transformer_new/.idea/Neighborhood-Attention-Transformer_new.iml" filepath="$PROJECT_DIR$/../Neighborhood-Attention-Transformer_new/.idea/Neighborhood-Attention-Transformer_new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PVT/.idea/PVT.iml" filepath="$PROJECT_DIR$/../PVT/.idea/PVT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SDI-Net/.idea/SDI-Net.iml" filepath="$PROJECT_DIR$/../SDI-Net/.idea/SDI-Net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Swin-Transformer/.idea/Swin-Transformer.iml" filepath="$PROJECT_DIR$/../Swin-Transformer/.idea/Swin-Transformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Swin-Transformer-Semantic-Segmentation/.idea/Swin-Transformer-Semantic-Segmentation.iml" filepath="$PROJECT_DIR$/../Swin-Transformer-Semantic-Segmentation/.idea/Swin-Transformer-Semantic-Segmentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Twins/.idea/Twins.iml" filepath="$PROJECT_DIR$/../Twins/.idea/Twins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../U-Net_v2/.idea/U-Net_v2.iml" filepath="$PROJECT_DIR$/../U-Net_v2/.idea/U-Net_v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../iFormer/.idea/iFormer.iml" filepath="$PROJECT_DIR$/../iFormer/.idea/iFormer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pytorch-image-models/.idea/pytorch-image-models.iml" filepath="$PROJECT_DIR$/../pytorch-image-models/.idea/pytorch-image-models.iml" />
+    </modules>
+  </component>
+</project>
