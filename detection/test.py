@@ -20,10 +20,10 @@ from mmdet.datasets import (build_dataloader, build_dataset,
                             replace_ImageToTensor)
 from mmdet.models import build_detector, build_backbone
 
-from nat import *
-from dinat import *
-from dinats import *
-
+# from nat import *
+# from dinat import *
+# from dinats import *
+from detection.gvt_3 import *
 
 def parse_args():
     parser = argparse.ArgumentParser(
