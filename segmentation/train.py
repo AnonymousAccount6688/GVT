@@ -20,10 +20,10 @@ from mmseg.datasets import build_dataset
 from mmseg.models import build_segmentor
 from mmseg.utils import collect_env, get_root_logger
 
-from nat import *
-from dinat import *
-from dinats import *
-
+# from nat import *
+# from dinat import *
+# from dinats import *
+from segmentation.gvt_3 import *
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')

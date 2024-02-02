@@ -17,11 +17,11 @@ from mmseg.apis import multi_gpu_test, single_gpu_test
 from mmseg.datasets import build_dataloader, build_dataset
 from mmseg.models import build_segmentor
 
-from nat import *
-from dinat import *
-from dinats import *
+# from nat import *
+# from dinat import *
+# from dinats import *
 
-
+from segmentation.gvt_3 import *
 def parse_args():
     parser = argparse.ArgumentParser(
         description='mmseg test (and eval) a model')
