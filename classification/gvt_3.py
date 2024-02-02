@@ -1,14 +1,6 @@
 import pdb
 
-from einops import rearrange
-"""
-Neighborhood Attention Transformer.
-To appear in CVPR 2023.
-https://arxiv.org/abs/2204.07143
-
-This source code is licensed under the license found in the
-LICENSE file in the root directory of this source tree.
-"""
+from einops import rearrange, repeat
 import torch.nn.functional as F
 import math
 import torch
@@ -262,7 +254,11 @@ class MultiNatten(nn.Module):
         self.downsample=None
         # self.width = width
         self.scale = len(dims)  # scale
-        print(f"fuck dims: {dims}")
+
+        self.fcs = [nn.Sequential(nn.Linear(sum(self.dims[i]), self.dims[i],
+                                            ), nn.Sigmoid()) for i in range(len(self.dims))]
+        # print(f"fuck dims: {dims}")
+
 
         # self.conv_fuse = nn.Conv2d(sum(dims), sum(dims), kernel_size=3, stride=1, padding=1,
         #                            bias=False)
@@ -289,9 +285,17 @@ class MultiNatten(nn.Module):
             sp = outs[i]
             sp = self.convs[i](sp)
             if i == 0:
-                out = sp
+                outs = [sp]
             else:
-                out = torch.cat((out, sp), -1)
+                outs = out.append(sp)
+                # out = torch.cat((out, sp), -1)
+        out = torch.cat(outs, -1)
+        out = out.mean(dim=(1, 2))
+
+        fcs = [self.fcs[i](out) for i in range(len(outs))]
+        outs = [repeat(fcs[i], 'b c -> b 1 1 c') * outs[i] for i in range(len(outs))]
+        out = torch.cat(outs, -1)
+
         if torch.isnan(out).any():
             print(f"out2 is nan: {torch.isnan(out).any()}")
         # out = rearrange(self.bn(rearrange(out, 'b h w c -> b c h w').contiguous()),
