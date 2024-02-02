@@ -45,7 +45,8 @@ from timm.utils import ApexScaler, NativeScaler
 
 # from isotropic import *
 # import nat_5
-import nat_new_2
+# import nat_new_2
+import gvt_3
 from extras import get_gflops, get_mparams
 
 import yaml
