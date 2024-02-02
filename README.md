@@ -6,4 +6,4 @@
 
 3. run the training and testing script in the folder `classification`, `detection` and `segmentation`.
 
-Detailed instructions coming soon.
+Detailed instructions coming soon. This repo is still messy, the cleaned version coming soon.
